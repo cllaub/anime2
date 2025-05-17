@@ -1,0 +1,29 @@
+{% extends "admin/base_admin.html" %}
+
+{% block content %}
+<h1 class="font-bold text-3xl text-center">ANIME</h1>
+<table class="w-5/6 mx-auto">
+    <thread class="[&>*]:border [&>*]:border-black">
+        <tr>
+            <th>Nom</th>
+            <th>Image</th> 
+            <th>Description</th>
+            <th>Auteur</th>
+        </tr>
+    </thread>
+    <tbody>
+        {% for post in mes_post %}
+        <tr class="[&>*]:border [&>*]:border-black">
+            <td>{{post.titre}}</td>
+            <td><img class="h-64 w-64 object-contain" src="{{post.image}}"></td>
+            <td>{{post.description}}</td>
+            <td>{{post.auteur}}</td>
+            <td style="padding: 5px 20px;"><a href="/voir">voir</a></td>
+            <td style="padding: 5px 20px;"><a href="/modifier">modifier</a></td>
+            <td style="padding: 5px 20px;"><a href="/supprimer_post/{{post.titre}}">supprimer</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+</table>
+{% endblock %} 

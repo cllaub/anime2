@@ -1,0 +1,31 @@
+{% extends "Base.HTML" %}
+
+{% block content %}
+<form action="/register" method="POST">
+    <!-- block "pseudo" -->
+   <div> 
+        
+        <label>Pseudo</label>
+        <input type="text" name="input_pseudo" class="border-2 border-black">
+   </div>
+
+   <!--block "mot de passe" -->
+
+   <div> 
+        
+      <label>Mot de passe</label>
+      <input type="password" name="input_mdp" class="border-2 border-black">
+   </div>
+
+   <div> 
+        
+      <label>avatar</label>
+      <input type="password" name="input_avatar" class="border-2 border-black">
+   </div>
+
+   <button type="submit" class="bg-black-200 p-3 rounded-full hover:bg-black-400">Se connecter</button>
+
+
+</form>
+
+{% endblock %}

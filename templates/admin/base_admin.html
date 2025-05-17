@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white	h-screen flex flex-col justify-end">
+    <header> 
+        <h1> mon titre </h1>
+    </header>
+    
+    <main class="h-screen w-screen">
+        {% block content %}
+        {% endblock %} 
+    </main>
+    <div class="fixed w-screen"> 
+        <footer class="bg-pink flex justify-between" style="padding: 5px;">
+            <button type="button" class="bg-orange-700 rounded-lg" style="padding: 5px 20px;"><a href="/profil">Profil</a></button>
+            <button type="button" class="bg-orange-700 rounded-lg" style="padding: 5px 20px;"><a href="/">Accueil</a></button>
+            <button type="button" class="bg-orange-700 rounded-lg" style="padding: 5px 20px;"><a href="/recherche">Recherche</a></button>
+        </footer>
+    </div>
+</body>
+</html>
